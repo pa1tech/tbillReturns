@@ -13,3 +13,4 @@ Python script to scrape T-Bill Returns Data of the year from RBI press releases
 * Human intervention needed if challenged it Captcha
 * Requriements: Python3, selenium, pandas, webdriver_manager
 
+<img src="https://raw.githubusercontent.com/pa1tech/tbillReturns/main/snap.png" width="400px"/>
