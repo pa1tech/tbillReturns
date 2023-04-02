@@ -58,7 +58,7 @@ driver.quit()
 
 df['Date'] = pd.to_datetime(df['Date'])
 df = df.sort_values(by='Date',ascending=True, ignore_index=True)
-df['Date'] = df['Date'].dt.strftime('%d-%m-%Y')
+df['Date'] = df['Date'].dt.strftime('%d %b, %Y')
 df.to_excel("Tbill_Returns_2023.xlsx",sheet_name="Sheet1",index = False)
 
 os.remove("tmp.html")
