@@ -58,7 +58,7 @@ for text in tableText:
 				d = dfs[0]
 				date = d.loc[1,0].split(":")[1]
 
-				df1 = pd.DataFrame({"Press Release ID":[prid], "Date":[date], "91 DTB Yield":[returns[0]], "182 DTB Yield":[returns[1]], "364 DTB Yield":[returns[2]]})
+				df1 = pd.DataFrame({"Press Release ID":[int(prid)], "Date":[date], "91 DTB Yield":[returns[0]], "182 DTB Yield":[returns[1]], "364 DTB Yield":[returns[2]]})
 				df = pd.concat((df,df1))
 			except :
 				print("Exception in https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid="+prid)
