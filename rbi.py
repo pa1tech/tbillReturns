@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 driver = Chrome(service=Service(ChromeDriverManager().install()))
-excel_file = "Tbill_Returns_2023.xlsx"
+excel_file = "Tbill_Returns_2024.xlsx"
 
 try:
 	df = pd.read_excel(excel_file,sheet_name="Sheet1")
@@ -20,10 +20,10 @@ except:
 driver.get("https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx")
 if(re.search("Your support ID is:*",driver.page_source)): input("\n Press enter to cotinue after completing captcha:")
 
-driver.find_element(By.ID,'btn2023').click()
+driver.find_element(By.ID,'btn2024').click()
 if(re.search("Your support ID is:*",driver.page_source)): input("\n Press enter to cotinue after completing captcha:")
 
-driver.find_element(By.ID,'20230').click()
+driver.find_element(By.ID,'20240').click()
 if(re.search("Your support ID is:*",driver.page_source)): input("\n Press enter to cotinue after completing captcha:")
 
 text = driver.page_source
