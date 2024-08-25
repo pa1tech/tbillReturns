@@ -5,7 +5,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-driver = Chrome(service=Service(ChromeDriverManager().install()))
+chrome_install = ChromeDriverManager().install()
+
+folder = os.path.dirname(chrome_install)
+chromedriver_path = os.path.join(folder, "chromedriver.exe")
+
+driver = Chrome(service=Service(chromedriver_path))
 excel_file = "Tbill_Returns_2024.xlsx"
 
 try:
